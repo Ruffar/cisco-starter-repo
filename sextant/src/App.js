@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Banner from './Banner.js';
 import Exhibit from './Exhibit.js';
+import PublicAddress from './PublicAddress';
 
 
 
@@ -12,7 +13,10 @@ function App() {
       <Banner></Banner>
       
       <div className="ExhibitContainer">
-        <Exhibit header="Public IP" landColor="rgb(80, 255, 120)"></Exhibit>
+        <Exhibit header="Public IP Address" landColor="rgb(80, 255, 120)">
+          <PublicAddress useIpv6={false}></PublicAddress>
+          <PublicAddress useIpv6={true}></PublicAddress>
+        </Exhibit>
       </div>
 
       <div className="BottomBar">

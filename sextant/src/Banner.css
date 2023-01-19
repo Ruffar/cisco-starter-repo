@@ -7,7 +7,7 @@
     margin-bottom: 20px;
 
     background-color: rgb(var(--darkest-color));
-    box-shadow: 2px 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
 .Banner * {

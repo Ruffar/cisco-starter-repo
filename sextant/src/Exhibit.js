@@ -14,7 +14,7 @@ class Exhibit extends Component
   }
 
   render()
-  {//style={{backgroundColor: this.props.landColor}}
+  {
     return (
       <div className="Exhibit">
         <h1 className="ExhibitHeader">{this.props.header}</h1>

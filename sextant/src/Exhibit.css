@@ -1,8 +1,6 @@
 :root {
     --exhibit-width: 250px;
     --exhibit-height: 200px;
-    --exhibit-hovered-width: 360px;
-    --exhibit-hovered-height: 300px;
 }
 
 
@@ -17,11 +15,12 @@
     background-color: rgb(var(--brightest-color));
     color: rgb(var(--darkest-color));
     border-radius: 20px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
 }
 
 .Exhibit:hover {
-    width: var(--exhibit-hovered-width);
-    height: var(--exhibit-hovered-height);
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.1);
 }
 
 .Exhibit * {
@@ -29,7 +28,7 @@
 }
 
 .Exhibit>h1 {
-    width: 100%;
+    width: calc(var(--exhibit-width) - 20px);
     height: 20px;
     margin-top: 10px;
     padding-left: 10px;
@@ -40,11 +39,11 @@
 }
 
 .Exhibit>.ExhibitMain {
-    width: 0;
-    height: 0;
-}
+    width: calc(var(--exhibit-width) - 32px);
+    height: calc(var(--exhibit-height) - 20px);
+    padding-left: 16px;
+    padding-right: 16px;
 
-.Exhibit:hover>.ExhibitMain {
-    width: 100%;
-    height: calc(100%-30px);
+    text-align: left;
+    font-size: 18px;
 }

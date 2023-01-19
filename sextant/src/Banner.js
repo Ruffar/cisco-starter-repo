@@ -23,7 +23,6 @@ class Banner extends Component
           Sextant
         </div>
         <PageButton text="Home" link="/"></PageButton>
-        <PageButton text="About" link="/about"></PageButton>
       </div>
     );
   }

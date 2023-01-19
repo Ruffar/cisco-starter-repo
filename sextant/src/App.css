@@ -1,47 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+:root {
+  --darkest-color: 72, 61, 63;
+  --medium-color: 158, 148, 140;
+  --brightest-color: 244, 235, 217;
+
+  --highlight-color: 88, 164, 176;
+}
+
+body {
+  background-color: rgb(var(--medium-color));
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(var(--brightest-color));
+
+  background: conic-gradient(from 90deg at 3px 3px, rgb(var(--medium-color)) 90deg, rgb(156, 146, 138) 0) 0 0/120px 120px;;
+}
+
 .App {
   text-align: center;
 }
 
 
 
-
-.Banner {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 60px;
-
-  /*list-style-type: none;*/
+.ExhibitContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
-.Banner * {
-  display: block;
-  float: left;
-}
 
-.BannerLogo {
-  width: 200px;
-}
-
-.BannerLogo * {
-  display: block;
-  float: left;
-}
-
-.AppIcon {
-  height: 70px;
-  width: 70px;
-}
-
-.PageButton {
-  width: 10%;
-}
 
 .BottomBar {
   bottom: 0;
-  padding-top: 100px;
+  margin-top: 100px;
+  padding: 10px;
   position: fixed;
   width: 100vw;
   height: 100px;
+
+  background-color: rgb(var(--darkest-color));
 }

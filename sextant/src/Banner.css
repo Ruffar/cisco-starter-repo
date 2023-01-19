@@ -1,0 +1,52 @@
+.Banner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    margin-bottom: 20px;
+
+    background-color: rgb(var(--darkest-color));
+    box-shadow: 2px 10px 25px rgba(0,0,0,0.2);
+}
+
+.Banner * {
+    display: block;
+    float: left;
+}
+
+.BannerLogo {
+    width: 200px;
+    color: rgb(var(--highlight-color));
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 60px;
+    justify-content: center;
+    text-align: left;
+}
+
+.BannerLogo * {
+    display: block;
+    float: left;
+}
+
+.AppIcon {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+.PageButton {
+    width: 10%;
+    height: 100%;
+    background-color: inherit;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(var(--medium-color));
+}
+
+.PageButton:hover {
+    color: rgb(var(--brightest-color));
+}

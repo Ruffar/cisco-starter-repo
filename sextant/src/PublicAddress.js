@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import './PublicAddress.css';
+import React, {useState, useEffect} from 'react';
 
 
 function PublicAddress(props)
@@ -16,7 +17,7 @@ function PublicAddress(props)
     
 
     return (
-        <div>{props.useIpv6 ? "IPv6: " : "IPv4: "}{address}</div>
+        <div>{props.useIpv6 ? "IPv6: " : "IPv4: "}<span className="AddressValue">{address}</span></div>
     );
 }
 

@@ -1,3 +1,4 @@
 .AddressValue {
     color: rgb(var(--highlight-color));
+    padding-left: 5px;
 }

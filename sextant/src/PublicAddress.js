@@ -1,24 +1,33 @@
 import './PublicAddress.css';
-import React, {useState, useEffect} from 'react';
+import React, {Component} from 'react';
 
-
-function PublicAddress(props)
+class PublicAddress extends Component
 {
-    const [address, setAddress] = useState("");
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            address: "Loading..."
+        }
 
-    useEffect(() => {
         if (props.useIpv6) {
             //Note: this always return ipv4 so far, but there is no API call guaranteed to return ipv6
-            fetch('https://api64.ipify.org/?format=json').then((response) => response.json()).then((data)=>setAddress(data.ip)).catch(()=>setAddress("Error"));
+            fetch('https://api64.ipify.org/?format=json').then((response) => response.json()).then((data)=>this.setState({address: data.ip})).catch(()=>this.setState({address: "Error"}));
         } else {
-            fetch('https://api4.ipify.org/?format=json').then((response) => response.json()).then((data)=>setAddress(data.ip)).catch(()=>setAddress("Error"));
+            fetch('https://api4.ipify.org/?format=json').then((response) => response.json()).then((data)=>this.setState({address: data.ip})).catch(()=>this.setState({address: "Error"}));
         }
-    });
-    
+    }
 
-    return (
-        <div>{props.useIpv6 ? "IPv6: " : "IPv4: "}<span className="AddressValue">{address}</span></div>
-    );
+
+    render()
+    {
+        return (
+            <div>
+                <h2>{this.props.useIpv6 ? "IPv6" : "IPv4"}</h2>
+                <div className="AddressValue">{this.state.address}</div>
+            </div>
+        );
+    }
 }
 
 export default PublicAddress;

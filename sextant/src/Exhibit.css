@@ -19,8 +19,8 @@
 }
 
 .Exhibit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 12px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px) scale(1.005);
+    box-shadow: 0px 12px 15px rgba(0,0,0,0.15);
 }
 
 .Exhibit * {
@@ -28,14 +28,21 @@
 }
 
 .Exhibit>h1 {
-    width: calc(var(--exhibit-width) - 20px);
-    height: 20px;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: calc(var(--exhibit-width) - 40px);
+    height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 20px 20px 0 0;
 
     font-size: 20px;
     text-align: left;
+
+    background-color: rgb(var(--darkest-color));
+    color: rgb(var(--brightest-color));
 }
 
 .Exhibit>.ExhibitMain {
@@ -46,4 +53,18 @@
 
     text-align: left;
     font-size: 18px;
+}
+
+.ExhibitMain h2 {
+    color: rgb(var(--darkest-color));
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.ExhibitMain h3 {
+    color: rgb(var(--medium-color));
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
 }

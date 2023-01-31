@@ -1,3 +1,56 @@
+.LatencyInfo {
+    display: inline-flex;
+}
+
+.LatencyInfo>div {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 55px;
+}
+
+
+
 .LatencyValue {
     color: rgb(var(--highlight-color));
+    font-size: 19px;
+}
+
+.MsUnit {
+    color: rgb(var(--darkest-color));
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+
+.Exhibit .LowPriorityLatency * {
+    color: rgb(var(--medium-color))
+}
+.Exhibit .LowPriorityLatency .LatencyValue {
+    font-size: 17px;
+}
+.Exhibit .LowPriorityLatency .MsUnit {
+    font-size: 9px;
+}
+
+.Exhibit:hover .LowPriorityLatency .LatencyValue {
+    color: rgb(var(--highlight-color));
+}
+.Exhibit:hover .LowPriorityLatency .MsUnit {
+    color: rgb(var(--darkest-color));
+}
+
+
+.SmallLatency>div {
+    height: 20px;
+    width: 100px;
+}
+
+.SmallLatency h3 {
+    display: inline;
+    margin-right: 5px;
+}
+
+.Exhibit .SmallLatency .LatencyValue {
+    font-size: 12px;
 }
